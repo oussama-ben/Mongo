@@ -1,0 +1,12 @@
+- use contact
+- db.createCollection("contactlist")
+- 
+
+-db.contactlist.insertMany([{lastname: "Ben lahmer", firstname: "Fares", age: 26}, {lastname: "Kefi", firstname: "Saif", age: 15}])
+-db.contactlist.find().pretty()
+-db.contactlist.find({id:1})
+-db.contactlist.find({age: {$gt: 18}})
+-db.contactlist.find({$and:[{age: {$gt: 18}, {lastname: {$regex: /ah/}}]})
+-db.contactlist.update({firstname: "saif"}, {$set: {firstname: "anis"}})
+-db.contactlist.deleteMany({age :{$lt: 5}})
+-db.contactlist.find()
